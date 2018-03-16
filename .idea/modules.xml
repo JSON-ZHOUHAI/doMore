@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/zPluto.iml" filepath="$PROJECT_DIR$/zPluto.iml" />
       <module fileurl="file://$PROJECT_DIR$/zPluto-common/zPluto-common.iml" filepath="$PROJECT_DIR$/zPluto-common/zPluto-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/zPluto-config/zPluto-config.iml" filepath="$PROJECT_DIR$/zPluto-config/zPluto-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zPluto-seDemo/zPluto-seDemo.iml" filepath="$PROJECT_DIR$/zPluto-seDemo/zPluto-seDemo.iml" />
     </modules>
   </component>
 </project>

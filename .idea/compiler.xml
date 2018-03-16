@@ -8,12 +8,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="zPluto-common" />
         <module name="zPluto-config" />
+        <module name="zPluto-seDemo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="zPluto" target="1.5" />
       <module name="zPluto-common" target="1.5" />
       <module name="zPluto-config" target="1.5" />
+      <module name="zPluto-seDemo" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

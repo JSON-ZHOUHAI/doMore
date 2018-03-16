@@ -2,6 +2,7 @@
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/zPluto-common" />
+    <file type="web" url="file://$PROJECT_DIR$/zPluto-seDemo" />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>false</service-enabled>

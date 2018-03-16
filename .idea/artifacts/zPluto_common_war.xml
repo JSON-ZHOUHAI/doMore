@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="zPluto-common:war">
+    <output-path>$PROJECT_DIR$/zPluto-common/target</output-path>
+    <root id="archive" name="zPluto-common.war">
+      <element id="artifact" artifact-name="zPluto-common:war exploded" />
+    </root>
+  </artifact>
+</component>

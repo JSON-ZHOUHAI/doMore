@@ -2,7 +2,140 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a4f703b-9b24-45cc-a16f-1efb2e830087" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/annotation/Log.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/aspect/LogAspect.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/config/ApplicationContextRegister.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/config/BootdoConfig.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/config/Constant.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/config/DateConverConfig.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/config/DruidDBConfig.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/config/MyBatisConfig.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/config/QuartzConfigration.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/config/SpringSessionConfig.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/config/WebConfigurer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/controller/BaseController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/controller/DictController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/controller/FileController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/controller/GeneratorController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/controller/JobController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/controller/LogController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/dao/DictDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/dao/FileDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/dao/GeneratorMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/dao/LogDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/dao/TaskDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/domain/ColumnDO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/domain/DictDO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/domain/FileDO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/domain/LogDO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/domain/PageDO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/domain/ScheduleJob.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/domain/TableDO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/domain/TaskDO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/domain/Tree.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/exception/BDException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/exception/BDExceptionHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/exception/MainsiteErrorController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/listenner/ScheduleJobInitListener.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/quartz/factory/JobFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/quartz/utils/QuartzManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/redis/JedisConfiguration.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/redis/JedisUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/redis/shiro/RedisCache.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/redis/shiro/RedisCacheManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/redis/shiro/RedisManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/redis/shiro/RedisSessionDAO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/redis/shiro/SerializeUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/service/DictService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/service/FileService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/service/GeneratorService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/service/JobService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/service/LogService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/service/impl/DictServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/service/impl/FileServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/service/impl/GeneratorServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/service/impl/JobServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/service/impl/LogServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/utils/BDException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/utils/Base64Utils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/utils/BuildTree.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/utils/DateUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/utils/FileType.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/utils/FileUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/utils/GenUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/utils/HttpContextUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/utils/IPUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/utils/ImageUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/utils/JSONUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/utils/MD5Utils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/utils/PageUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/utils/Query.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/utils/R.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/utils/ScheduleJobUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/utils/ShiroUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/utils/SpringContextHolder.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/utils/StringUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/utils/TimeUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/utils/UploadUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/common/utils/xss/JsoupUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/system/config/BDSessionListener.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/system/config/RedisConfig.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/system/config/ShiroConfig.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/system/config/Swagger2Config.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/system/config/XssConfig.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/system/controller/DeptController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/system/controller/LoginController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/system/controller/MenuController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/system/controller/RoleController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/system/controller/SessionController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/system/controller/UserController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/system/dao/DeptDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/system/dao/MenuDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/system/dao/RoleDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/system/dao/RoleMenuDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/system/dao/UserDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/system/dao/UserRoleDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/system/domain/DeptDO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/system/domain/MenuDO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/system/domain/RoleDO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/system/domain/RoleMenuDO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/system/domain/UserDO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/system/domain/UserOnline.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/system/domain/UserRoleDO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/system/domain/UserToken.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/system/filter/XssFilter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/system/filter/XssHttpServletRequestWrapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/system/service/DeptService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/system/service/MenuService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/system/service/RoleService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/system/service/SessionService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/system/service/UserService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/system/service/impl/DeptServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/system/service/impl/MenuServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/system/service/impl/RoleServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/system/service/impl/SessionServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/system/service/impl/UserServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/system/shiro/UserRealm.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/system/vo/UserVO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/resources/config/ehcache.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/resources/config/quartz.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/resources/templates/common/function/add.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/resources/templates/common/function/assign.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/resources/templates/common/function/edit.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/resources/templates/common/function/function.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/resources/templates/common/home.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/resources/templates/common/include.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/resources/templates/common/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/resources/templates/common/login.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/resources/templates/common/menu/add.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/resources/templates/common/menu/assign.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/resources/templates/common/menu/edit.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/resources/templates/common/menu/menu.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/resources/templates/common/menu/tree.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zPluto-admin/src/test/java/cn/zPluto/admin/AdminApplicationTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zPluto-admin/pom.xml" afterPath="$PROJECT_DIR$/zPluto-admin/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/system/web/TestController.java" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/java/cn/zPluto/admin/system/web/TestController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zPluto-admin/src/main/resources/application-dev.properties" afterPath="$PROJECT_DIR$/zPluto-admin/src/main/resources/application-dev.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zPluto-common/zPluto-common.iml" afterPath="$PROJECT_DIR$/zPluto-common/zPluto-common.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zPluto-config/zPluto-config.iml" afterPath="$PROJECT_DIR$/zPluto-config/zPluto-config.iml" />
     </list>
@@ -20,7 +153,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
@@ -34,8 +167,8 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/zPluto-seDemo/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+            <state relative-caret-position="180">
+              <caret line="10" column="43" lean-forward="true" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -99,6 +232,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -112,45 +246,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zPluto" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zPluto" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zPluto-seDemo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zPluto" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zPluto" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zPluto-seDemo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -575,11 +672,12 @@
       <updated>1521172481575</updated>
       <workItem from="1521172483675" duration="1668000" />
       <workItem from="1521180422431" duration="103000" />
+      <workItem from="1523166781531" duration="22000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1771000" />
+    <option name="totallyTimeSpent" value="1793000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="0" width="1696" height="1026" extended-state="0" />
@@ -601,7 +699,6 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Key Promoter" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.330617" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -610,15 +707,16 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Mybatis datasource" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17340687" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17585784" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.330617" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -638,11 +736,26 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="38" lean-forward="false" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zPluto-seDemo/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/zPluto-config/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -657,7 +770,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
           <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -671,8 +783,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/zPluto-seDemo/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+        <state relative-caret-position="180">
+          <caret line="10" column="43" lean-forward="true" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
           <folding />
         </state>
       </provider>

@@ -1,7 +1,8 @@
 package cn.zPluto.admin.system.web;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import cn.zPluto.admin.system.domain.User;
+import org.springframework.web.bind.annotation.*;
+import java.util.*;
 
 @RestController
 @RequestMapping(value = "/test")
@@ -10,7 +11,7 @@ public class TestController {
     // 创建线程安全的Map
     static Map<Long, User> users = Collections.synchronizedMap(new HashMap<Long, User>());
 
-    @RequestMapping(value="/", method=RequestMethod.GET)
+    @RequestMapping(value="/", method= RequestMethod.GET)
     public List<User> getUserList() {
         // 处理"/users/"的GET请求，用来获取用户列表
         // 还可以通过@RequestParam从页面中传递参数来进行查询条件或者翻页信息的传递
@@ -30,6 +31,8 @@ public class TestController {
     public User getUser(@PathVariable Long id) {
         // 处理"/users/{id}"的GET请求，用来获取url中id值的User信息
         // url中的id可通过@PathVariable绑定到函数的参数中
+        User user=new User();
+        user.setId((long) 1.00);
         return users.get(id);
     }
 

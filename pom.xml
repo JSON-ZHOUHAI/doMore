@@ -12,9 +12,49 @@
         <module>zPluto-config</module>
         <module>zPluto-common</module>
         <module>zPluto-seDemo</module>
+        <module>zPluto-admin</module>
     </modules>
 
+    <repositories>
+        <repository>
+            <id>central</id>
+            <name>aliyun maven</name>
+            <layout>default</layout>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <!--project私服 -->
+        <repository>
+            <id>nexus</id>
+            <name>Team Nexus Repository</name>
+            <url>http://192.168.11.42:8050/nexus/content/groups/public</url>
+        </repository>
+    </repositories>
+
+    <distributionManagement>
+        <repository>
+            <id>nexus-releases</id>
+            <name>NexusReleases</name>
+            <url>http://192.168.11.42:8050/nexus/content/groups/public</url>
+        </repository>
+
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <name>NexusSnapshots</name>
+            <url>http://192.168.11.42:8050/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+
     <properties>
+        <!-- spring-boot version -->
+        <spring-boot.version>1.5.9.RELEASE</spring-boot.version>
+        <!-- test jar -->
+        <junit.version>4.12</junit.version>
+        <!-- database connection -->
+        <mysql-connector>5.1.38</mysql-connector>
+
         <jackson.version>2.9.3</jackson.version>
         <java.version>1.7</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -25,7 +65,54 @@
         <pinyin4j.version>2.5.0</pinyin4j.version>
     </properties>
 
-    <dependencies>
+
+    <!-- 相关依赖 -->
+    <dependencyManagement>
+       <dependencies>
+       <dependency>
+           <groupId>org.springframework.boot</groupId>
+           <artifactId>spring-boot-dependencies</artifactId>
+           <version>${spring-boot.version}</version>
+           <type>pom</type>
+           <scope>import</scope>
+       </dependency>
+
+       <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql-connector}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>${commons-io.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${common-lang3.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+            <version>${commons-fileupload.version}</version>
+        </dependency>
         <!--jackson-->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
@@ -78,33 +165,7 @@
             <artifactId>jcip-annotations</artifactId>
             <version>1.0</version>
         </dependency>
-
-    </dependencies>
-
-
-    <!-- 配置仓库 -->
-    <repositories>
-        <!--project私服 -->
-        <repository>
-            <id>nexus</id>
-            <name>Team Nexus Repository</name>
-            <url>http://192.168.11.42:8050/nexus/content/groups/public</url>
-        </repository>
-    </repositories>
-
-    <distributionManagement>
-        <repository>
-            <id>nexus-releases</id>
-            <name>NexusReleases</name>
-            <url>http://192.168.11.42:8050/nexus/content/groups/public</url>
-        </repository>
-
-        <snapshotRepository>
-            <id>nexus-snapshots</id>
-            <name>NexusSnapshots</name>
-            <url>http://192.168.11.42:8050/nexus/content/repositories/snapshots</url>
-        </snapshotRepository>
-    </distributionManagement>
-
+      </dependencies>
+    </dependencyManagement>
 
 </project>

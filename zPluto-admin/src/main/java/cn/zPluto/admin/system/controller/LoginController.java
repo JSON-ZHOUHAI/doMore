@@ -32,11 +32,13 @@ public class LoginController extends BaseController {
 
 	@Autowired
 	MenuService menuService;
+
 	@Autowired
 	FileService fileService;
+
 	@GetMapping({ "/", "" })
 	String welcome(Model model) {
-		return "redirect:/blog";
+		return "redirect:/login";
 	}
 
 	@Log("请求访问主页")

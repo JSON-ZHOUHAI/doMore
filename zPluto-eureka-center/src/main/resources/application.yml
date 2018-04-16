@@ -1,0 +1,12 @@
+spring:
+    application:
+        name: zPluto-eureka-center
+
+server:
+    port: 1111 #启动端口
+
+eureka:
+    client:
+        registerWithEureka: false  #false:不作为一个客户端注册到注册中心
+        fetchRegistry: false # 由于注册中心的职责就是维护实例，它并不需要去检索服务  为true时，可以启动，但报异常：Cannot execute request on any known server
+

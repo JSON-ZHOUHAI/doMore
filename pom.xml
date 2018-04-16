@@ -3,16 +3,25 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <groupId>cn.zPluto</groupId>
     <artifactId>zPluto-parent</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.0.RELEASE</version>
+    </parent>
+
     <modules>
         <module>zPluto-config</module>
         <module>zPluto-common</module>
         <module>zPluto-seDemo</module>
         <module>zPluto-admin</module>
+        <module>zPluto-eureka-center</module>
+        <module>zPluto-service-base</module>
+        <module>zPluto-ribbon-consumer</module>
     </modules>
 
     <repositories>
@@ -48,13 +57,10 @@
     </distributionManagement>
 
     <properties>
-        <!-- spring-boot version -->
-        <spring-boot.version>1.5.9.RELEASE</spring-boot.version>
         <!-- test jar -->
         <junit.version>4.12</junit.version>
         <!-- database connection -->
         <mysql-connector>5.1.38</mysql-connector>
-
         <jackson.version>2.9.3</jackson.version>
         <java.version>1.7</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -63,41 +69,53 @@
         <commons-lang3.version>3.3.2</commons-lang3.version>
         <commons-io.version>2.5</commons-io.version>
         <pinyin4j.version>2.5.0</pinyin4j.version>
+        <commons-lang3.version>3.3.2</commons-lang3.version>
     </properties>
 
 
-    <!-- 相关依赖 -->
+    <!--依赖管理，用于管理spring-cloud的依赖，其中Camden.SR3是版本号-->
     <dependencyManagement>
-       <dependencies>
-       <dependency>
-           <groupId>org.springframework.boot</groupId>
-           <artifactId>spring-boot-dependencies</artifactId>
-           <version>${spring-boot.version}</version>
-           <type>pom</type>
-           <scope>import</scope>
-       </dependency>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Finchley.M8</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>1.2.33</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>1.0.11</version>
+            </dependency>
 
-       <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>${mysql-connector}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>${slf4j.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>commons-io</groupId>
-            <artifactId>commons-io</artifactId>
-            <version>${commons-io.version}</version>
-        </dependency>
+           <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql-connector}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${commons-io.version}</version>
+            </dependency>
+        <!--
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
@@ -112,7 +130,7 @@
             <groupId>commons-fileupload</groupId>
             <artifactId>commons-fileupload</artifactId>
             <version>${commons-fileupload.version}</version>
-        </dependency>
+        </dependency>  -->
         <!--jackson-->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>

@@ -1,0 +1,11 @@
+spring:
+    application:
+        name: zPluto-service-base
+
+server:
+    port: 8773 #启动端口
+
+eureka:
+    client:
+       serviceUrl:
+              defaultZone: http://${EUREKA_HOST:localhost}:${EUREKA_PORT:8761}/eureka/

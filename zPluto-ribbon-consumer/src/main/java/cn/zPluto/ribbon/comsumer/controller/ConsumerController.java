@@ -21,6 +21,6 @@ public class ConsumerController {
 
     @RequestMapping(value= "/ribbon-consumer",method = RequestMethod.GET)
     public String helloConsumer(){
-        return  restTemplate.getForEntity("http://zPluto-service-base/hello",String.class).getBody();
+        return  restTemplate.getForEntity("http://ZPLUTO-SERVICE-BASE/hello",String.class).getBody();
     }
 }

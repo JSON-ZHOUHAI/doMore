@@ -1,6 +1,6 @@
 spring:
     application:
-        name: zPluto-service-base
+        name: zPluto-ribbon-consumer
 
 server:
     port: 8773 #启动端口
@@ -8,4 +8,4 @@ server:
 eureka:
     client:
        serviceUrl:
-              defaultZone: http://${EUREKA_HOST:localhost}:${EUREKA_PORT:8761}/eureka/
+              defaultZone: http://${EUREKA_HOST:localhost}:${EUREKA_PORT:1111}/eureka/

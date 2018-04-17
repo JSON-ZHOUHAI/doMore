@@ -8,10 +8,13 @@ server:
 
 
 zuul:
+    retryable: false #取消重试机制
+    addHostHeader: true # 解决重定向，使网关在进行路由转发前为请求设置到Host信息
     routes:
         ribbon-consumer:
                 path: /api-consumer/**
                 serviceId: zPluto-ribbon-consumer
+                customSensitiveHeader: true  # 开启自定义默认敏感头信息
 
 eureka:
     client:

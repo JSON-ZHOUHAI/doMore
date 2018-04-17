@@ -17,6 +17,6 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 @EnableConfigServer
 public class CloudConfigApplication {
     public static void main(String[] args) {
-       new SpringApplicationBuilder(Application.class).web(true).run(args);
+        SpringApplication.run(CloudConfigApplication.class,args);
     }
 }

@@ -22,6 +22,8 @@
         <module>zPluto-eureka-center</module>
         <module>zPluto-service-base</module>
         <module>zPluto-ribbon-consumer</module>
+        <module>zPluto-cloud-config</module>
+        <module>zPuto-api-zuul</module>
     </modules>
 
     <repositories>

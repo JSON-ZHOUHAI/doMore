@@ -1,0 +1,22 @@
+spring:
+    application:
+        name: zPluto-api-zuul
+
+
+server:
+    port: 8775 #启动端口
+
+
+zuul:
+    routes:
+        ribbon-consumer:
+                path: /api-consumer/**
+                serviceId: zPluto-ribbon-consumer
+
+eureka:
+    client:
+       serviceUrl:
+              defaultZone:  http://${EUREKA_HOST:localhost}:${EUREKA_PORT:1111}/eureka/
+
+
+

@@ -5,10 +5,16 @@ spring:
         config:
            server:
                 git:
-                  uri:
-                  search-paths:
-                  username:
-                  password:
+                  uri:  https://gitee.com/zh-json/spring-cloud-config-git.git
+                  search-paths:   spring-cloud-in-action/config-repo
+                  username: 23862691@qq.com
+                  password: zhou900914
 
 server:
     port: 8779 #启动端口
+
+
+
+
+# http://127.0.0.1:8779/didispace/dev/master   访问 didispace应用,dev环境,master分支
+# http://127.0.0.1:8779/didispace-dev.properties

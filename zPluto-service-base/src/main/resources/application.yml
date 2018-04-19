@@ -1,6 +1,8 @@
 spring:
     application:
         name: zPluto-service-base
+    profiles:
+        active: dev
 #zPluto-service-base
 server:
     port: 8771 #启动端口

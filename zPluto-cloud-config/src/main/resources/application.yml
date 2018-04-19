@@ -14,7 +14,10 @@ server:
     port: 8779 #启动端口
 
 
-
+eureka:
+    client:
+       serviceUrl:
+              defaultZone:  http://${EUREKA_HOST:localhost}:${EUREKA_PORT:1111}/eureka/
 
 # http://127.0.0.1:8779/didispace/dev/master   访问 didispace应用,dev环境,master分支
 # http://127.0.0.1:8779/didispace-dev.properties

@@ -22,12 +22,12 @@ public class HelloController {
     @Autowired
     private DiscoveryClient client;
 
-    @Value("${form}")
-    private String from;
+    @Value("${name}")
+    private String name;
 
     @RequestMapping(value="/hello",method = RequestMethod.GET)
     public String index(){
-        return "Hello World"+this.from;
+        return "Hello World"+this.name;
     }
 
 }

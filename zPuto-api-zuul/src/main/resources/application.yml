@@ -16,6 +16,7 @@ zuul:
                 serviceId: zPluto-ribbon-consumer
                 customSensitiveHeader: true  # 开启自定义默认敏感头信息
 
+
 eureka:
     client:
        serviceUrl:

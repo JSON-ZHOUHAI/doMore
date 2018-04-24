@@ -7,17 +7,17 @@ import org.springframework.web.client.RestTemplate;
 
 /**
  * <p>Description:</p>
- *
  * @author zhouh
  * @version 1.0
  * @Date 2018/4/16.
  */
 @Service
 public class ConsumerService {
+
     @Autowired
     RestTemplate restTemplate;
 
-    @HystrixCommand(fallbackMethod = "helloFallback")
+    @HystrixCommand(fallbackMethod = "helloFallback") //指向回调方法
     public String helloConsumer(){
         return  restTemplate.getForEntity("http://ZPLUTO-SERVICE-BASE/hello",String.class).getBody();
     }

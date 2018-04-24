@@ -1,27 +1,26 @@
 package cn.zPluto.ribbon.comsumer.controller;
 
-import cn.zPluto.ribbon.comsumer.service.ConsumerService;
+import cn.zPluto.ribbon.comsumer.service.HelloService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
 
 /**
  * <p>Description:</p>
- * rabbion实现客户端负载均衡
+ * feign 实现的客户单负载均衡
  * @author zhouh
  * @version 1.0
- * @Date 2018/4/12.
+ * @Date 2018/4/24.
  */
 @RestController
-public class ConsumerController {
+public class ConsumerFeignController {
 
     @Autowired
-    ConsumerService consumerService;
+    HelloService helloService;
 
-    @RequestMapping(value= "/ribbon-consumer",method = RequestMethod.GET)
+    @RequestMapping(value= "/feign-consumer",method = RequestMethod.GET)
     public String helloConsumer(){
-        return  consumerService.helloConsumer();
+        return helloService.hello();
     }
 }

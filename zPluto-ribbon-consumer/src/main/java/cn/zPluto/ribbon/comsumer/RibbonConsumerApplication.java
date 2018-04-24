@@ -21,7 +21,7 @@ import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @EnableEurekaClient
-@EnableFeignClients
+@EnableFeignClients  //开启spring feign
 @EnableAutoConfiguration
 @EnableHystrix
 @EnableHystrixDashboard

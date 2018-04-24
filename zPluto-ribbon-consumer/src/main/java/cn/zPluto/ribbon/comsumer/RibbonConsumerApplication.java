@@ -1,5 +1,6 @@
 package cn.zPluto.ribbon.comsumer;
 
+import feign.Logger;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -27,12 +28,22 @@ import org.springframework.web.client.RestTemplate;
 @EnableHystrixDashboard
 public class RibbonConsumerApplication {
 
-
+    /**
+     * ribbon负载均衡开启
+     * @return
+     */
     @Bean
     @LoadBalanced
     RestTemplate restTemplate(){
         return new RestTemplate();
     }
+
+
+    @Bean
+    Logger.Level  feignLoggerLevel(){
+       return Logger.Level.FULL;
+    }
+
 
     public static void main(String[] args) {
         SpringApplication.run(RibbonConsumerApplication.class,args);

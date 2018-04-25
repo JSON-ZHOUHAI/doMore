@@ -36,6 +36,7 @@
             <artifactId>spring-boot-starter-undertow</artifactId>
         </dependency>
 
+        <!-- 监控模块，其中包含了/refresh端点的实现，改端点将用于实现客户端应用配置信息的重新获取与刷新 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>

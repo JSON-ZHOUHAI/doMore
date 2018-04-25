@@ -24,6 +24,7 @@
         <module>zPluto-ribbon-consumer</module>
         <module>zPluto-cloud-config</module>
         <module>zPuto-api-zuul</module>
+        <module>zPluto-bus-rabbit</module>
     </modules>
 
     <repositories>

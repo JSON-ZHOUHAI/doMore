@@ -1,0 +1,11 @@
+server:
+    port: 8762
+
+spring:
+    application:
+        name: ace-admin
+    rabbitmq:
+             host: ${RABBIT_MQ_HOST:localhost}
+             port:  ${RABBIT_MQ_PORT:5672}
+             username: guest
+             password: guest

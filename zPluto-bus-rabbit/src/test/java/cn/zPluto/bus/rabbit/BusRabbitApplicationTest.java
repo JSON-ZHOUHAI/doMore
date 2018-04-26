@@ -4,8 +4,8 @@ import cn.zPluto.bus.rabbit.sender.Sender;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.SpringApplicationConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
 /**
  * <p>Description:</p>
@@ -14,8 +14,10 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * @version 1.0
  * @Date 2018/4/26.
  */
-@RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes =BusRabbitApplication.class)
+
+@RunWith(SpringRunner.class)
+@SpringBootTest
+
 public class BusRabbitApplicationTest {
 
     @Autowired

@@ -1,9 +1,9 @@
 server:
-    port: 8762
+    port: 8777
 
 spring:
     application:
-        name: ace-admin
+        name: zPluto-bus-rabbit
     rabbitmq:
              host: ${RABBIT_MQ_HOST:localhost}
              port:  ${RABBIT_MQ_PORT:5672}

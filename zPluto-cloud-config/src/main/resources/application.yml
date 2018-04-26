@@ -9,6 +9,11 @@ spring:
                   search-paths:   spring-cloud-in-action/config-repo
                   username: 23862691@qq.com
                   password: zhou900914
+    rabbitmq:
+               host: ${RABBIT_MQ_HOST:localhost}
+               port:  ${RABBIT_MQ_PORT:5672}
+               username: guest
+               password: guest
 
 server:
     port: 8779 #启动端口

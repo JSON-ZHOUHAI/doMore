@@ -3,6 +3,12 @@ spring:
         name: zPluto-service-base
     profiles:
         active: dev
+
+    rabbitmq:
+           host: ${RABBIT_MQ_HOST:localhost}
+           port:  ${RABBIT_MQ_PORT:5672}
+           username: guest
+           password: guest
 #zPluto-service-base
 server:
     port: 8771 #启动端口

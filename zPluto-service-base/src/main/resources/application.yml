@@ -9,6 +9,16 @@ spring:
            port:  ${RABBIT_MQ_PORT:5672}
            username: guest
            password: guest
+
+    cloud:
+           bus:
+              trace:
+                enabled: true
+
+management:
+       security:
+            enabled: false
+
 #zPluto-service-base
 server:
     port: 8771 #启动端口

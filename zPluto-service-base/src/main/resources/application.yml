@@ -23,7 +23,13 @@ management:
 server:
     port: 8771 #启动端口
 
+#springboot监控 actuator插件 开启全部端点权限
+endpoints:
+  sensitive: false
+
 eureka:
     client:
        serviceUrl:
               defaultZone:  http://${EUREKA_HOST:localhost}:${EUREKA_PORT:1111}/eureka/
+
+

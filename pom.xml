@@ -7,17 +7,20 @@
     <artifactId>zPluto-parent</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
-
+    
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.0.RELEASE</version>
+        <version>1.5.13.RELEASE</version>
     </parent>
 
     <modules>
-        <module>zPluto-config</module>
+
         <module>zPluto-common</module>
+        <!--
         <module>zPluto-seDemo</module>
+        <module>zPluto-config</module>
+        -->
         <module>zPluto-admin</module>
         <module>zPluto-eureka-center</module>
         <module>zPluto-service-base</module>
@@ -25,6 +28,10 @@
         <module>zPluto-cloud-config</module>
         <module>zPuto-api-zuul</module>
         <module>zPluto-bus-rabbit</module>
+        <module>zPluto-oauth2-server</module>
+        <module>zPluto-oauth2-resource</module>
+        <module>zPluto-oauth2-resource</module>
+        <module>zPluto-oauth2-client</module>
     </modules>
 
     <properties>
@@ -45,12 +52,27 @@
     <!--依赖管理，用于管理spring-cloud的依赖，其中Camden.SR3是版本号-->
     <dependencyManagement>
         <dependencies>
+
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>Finchley.M8</version>
+                <version>Edgware.SR3</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-tomcat</artifactId>
+                <version>1.5.13.RELEASE</version>
             </dependency>
 
             <dependency>
@@ -62,15 +84,16 @@
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid</artifactId>
-                <version>1.0.11</version>
+                <version>1.1.0</version>
             </dependency>
 
-           <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>${junit.version}</version>
-                <scope>test</scope>
+            <!-- Spring Boot JDBC -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-jdbc</artifactId>
+                <version>1.5.13.RELEASE</version>
             </dependency>
+
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
@@ -138,9 +161,31 @@
             <artifactId>jcip-annotations</artifactId>
             <version>1.0</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+            <version>1.16.22</version>
+        </dependency>
       </dependencies>
     </dependencyManagement>
 
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    s
     <repositories>
         <repository>
             <id>platform-releases</id>

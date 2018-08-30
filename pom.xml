@@ -27,45 +27,11 @@
         <module>zPluto-bus-rabbit</module>
     </modules>
 
-    <repositories>
-        <repository>
-            <id>central</id>
-            <name>aliyun maven</name>
-            <layout>default</layout>
-            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-        <!--project私服 -->
-        <repository>
-            <id>nexus</id>
-            <name>Team Nexus Repository</name>
-            <url>http://192.168.11.42:8050/nexus/content/groups/public</url>
-        </repository>
-    </repositories>
-
-    <distributionManagement>
-        <repository>
-            <id>nexus-releases</id>
-            <name>NexusReleases</name>
-            <url>http://192.168.11.42:8050/nexus/content/groups/public</url>
-        </repository>
-
-        <snapshotRepository>
-            <id>nexus-snapshots</id>
-            <name>NexusSnapshots</name>
-            <url>http://192.168.11.42:8050/nexus/content/repositories/snapshots</url>
-        </snapshotRepository>
-    </distributionManagement>
-
     <properties>
-        <!-- test jar -->
         <junit.version>4.12</junit.version>
-        <!-- database connection -->
         <mysql-connector>5.1.38</mysql-connector>
         <jackson.version>2.9.3</jackson.version>
-        <java.version>1.7</java.version>
+        <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <log4j.version>1.2.17</log4j.version>
         <slf4j.version>1.7.25</slf4j.version>
@@ -174,5 +140,35 @@
         </dependency>
       </dependencies>
     </dependencyManagement>
+
+    <repositories>
+        <repository>
+            <id>platform-releases</id>
+            <url>http://nexus.bkjk-inc.com/nexus/content/repositories/Bkjk-Platform-Releases/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+        <repository>
+            <id>platform-snapshots</id>
+            <url>http://nexus.bkjk-inc.com/nexus/content/repositories/Bkjk-Platform-Snapshots/</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>platform-snapshots</id>
+            <name>platform-snapshots</name>
+            <url>http://nexus.bkjk-inc.com/nexus/content/repositories/Bkjk-Platform-Snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>platform-releases</id>
+            <name>platform-releases</name>
+            <url>http://nexus.bkjk-inc.com/nexus/content/repositories/Bkjk-Platform-Releases</url>
+        </repository>
+    </distributionManagement>
 
 </project>

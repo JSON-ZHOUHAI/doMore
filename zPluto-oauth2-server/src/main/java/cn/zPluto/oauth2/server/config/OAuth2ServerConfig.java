@@ -1,6 +1,7 @@
 package cn.zPluto.oauth2.server.config;
 
 import cn.zPluto.oauth2.server.service.UserService;
+import cn.zPluto.oauth2.server.service.impl.ApplyClientDetailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -30,30 +31,31 @@ import java.util.concurrent.TimeUnit;
 @EnableAuthorizationServer //提供/oauth/authorize,/oauth/token,/oauth/check_token,/oauth/confirm_access,/oauth/error
 public class OAuth2ServerConfig extends AuthorizationServerConfigurerAdapter {
 
-//    @Autowired
-//    private DataSource dataSource;
-//
-//    @Bean // 声明TokenStore实现
-//    public TokenStore tokenStore() {
-//        return new JdbcTokenStore(dataSource);
-//    }
+    @Autowired
+    private DataSource dataSource;
+
+    @Bean // 声明TokenStore实现
+    public TokenStore tokenStore() {
+        return new JdbcTokenStore(dataSource);
+    }
 //
 //    @Bean // 声明 ClientDetails实现
 //    public ClientDetailsService clientDetails() {
 //        return new JdbcClientDetailsService(dataSource);
 //    }
 //
-//    @Autowired
-//    private TokenStore tokenStore;
+    @Autowired
+    private TokenStore tokenStore;
 //
 //    //@Autowired
 //    //private AuthenticationManager authenticationManager;
 //
+
 //    @Autowired
 //    private UserService userService;
 
     /**
-     *  client_credentials 模式
+     * client_credentials 模式
      * @param clients
      * @throws Exception
      */
@@ -85,10 +87,10 @@ public class OAuth2ServerConfig extends AuthorizationServerConfigurerAdapter {
 
 //    @Override // 配置框架应用上述实现
 //    public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
-//        endpoints.authenticationManager(authenticationManager);
+//        //endpoints.authenticationManager(authenticationManager);
 //        endpoints.tokenStore(tokenStore());
 //        endpoints.userDetailsService(userService);
-////         配置TokenServices参数
+//        // 配置TokenServices参数
 //        DefaultTokenServices tokenServices = new DefaultTokenServices();
 //        tokenServices.setTokenStore(endpoints.getTokenStore());
 //        tokenServices.setSupportRefreshToken(true);
@@ -98,12 +100,12 @@ public class OAuth2ServerConfig extends AuthorizationServerConfigurerAdapter {
 //        endpoints.tokenServices(tokenServices);
 //    }
 
-//    @Bean
-//    @Primary
-//    public DefaultTokenServices tokenServices() {
-//        DefaultTokenServices tokenServices = new DefaultTokenServices();
-//        tokenServices.setSupportRefreshToken(true); // support refresh token
-//        tokenServices.setTokenStore(tokenStore); // use jdbc token store
-//        return tokenServices;
-//    }
+    @Bean
+    @Primary
+    public DefaultTokenServices tokenServices() {
+        DefaultTokenServices tokenServices = new DefaultTokenServices();
+        tokenServices.setSupportRefreshToken(true); // support refresh token
+        tokenServices.setTokenStore(tokenStore); // use jdbc token store
+        return tokenServices;
+    }
 }

@@ -1,5 +1,5 @@
+
 spring:
-  port: 9001 #启动端口
   application:
           name: zPluto-oauth2-server
   datasource:
@@ -11,11 +11,12 @@ spring:
       username: root
       password: root
 
-
-
+server:
+     port: 9001 #启动端口
 
 eureka:
     client:
        serviceUrl:
               defaultZone: http://${EUREKA_HOST:localhost}:${EUREKA_PORT:1111}/eureka/
+
 

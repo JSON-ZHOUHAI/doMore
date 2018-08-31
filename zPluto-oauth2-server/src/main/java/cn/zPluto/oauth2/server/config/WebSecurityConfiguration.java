@@ -21,17 +21,17 @@ import org.springframework.security.config.annotation.authentication.configurers
 @Configuration
 public class WebSecurityConfiguration extends GlobalAuthenticationConfigurerAdapter {
 
-    @Autowired
-    private final UserService userService;
-
-    @Autowired
-    public WebSecurityConfiguration(UserService userService) {
-        this.userService = userService;
-    }
-
-    @Override
-    public void init(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(userService);
-
-    }
+//    @Autowired
+//    private final UserService userService;
+//
+//    @Autowired
+//    public WebSecurityConfiguration(UserService userService) {
+//        this.userService = userService;
+//    }
+//
+//    @Override
+//    public void init(AuthenticationManagerBuilder auth) throws Exception {
+//        auth.userDetailsService(userService);
+//
+//    }
 }

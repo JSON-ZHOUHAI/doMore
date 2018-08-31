@@ -34,7 +34,6 @@ public class OAuth2ServerConfig extends AuthorizationServerConfigurerAdapter {
     @Autowired
     private DataSource dataSource;
 
-
     /**
      * client_credentials 模式，使用数据库中client数据
      * @param clients
@@ -71,4 +70,15 @@ public class OAuth2ServerConfig extends AuthorizationServerConfigurerAdapter {
                 .allowFormAuthenticationForClients();
     }
 
+    /**
+     * 注入authenticationManager
+     * 来支持 password grant type
+     */
+    @Autowired
+    private AuthenticationManager authenticationManager;
+
+    @Override
+    public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
+        endpoints.authenticationManager(authenticationManager);
+    }
 }

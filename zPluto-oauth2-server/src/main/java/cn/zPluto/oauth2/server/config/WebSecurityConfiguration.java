@@ -15,6 +15,9 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.authentication.configurers.GlobalAuthenticationConfigurerAdapter;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
 /**
  * @author zhouh
@@ -24,20 +27,6 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
  */
 @Configuration
 public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
-
-//    @Autowired
-//    private final UserService userService;
-//
-//    @Autowired
-//    public WebSecurityConfiguration(UserService userService) {
-//        this.userService = userService;
-//    }
-//
-//    @Override
-//    public void init(AuthenticationManagerBuilder auth) throws Exception {
-//        auth.userDetailsService(userService);
-//
-//    }
 
     /**
      *  不拦截oauth要开放的资源
@@ -53,9 +42,34 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/oauth/**").authenticated();
     }
 
+    /**
+     * 需要配置这个支持password模式
+     * support password grant type
+     * @return
+     * @throws Exception
+     */
+    //配置内存模式的用户
     @Override
-    @Bean   // share AuthenticationManager for web and oauth
+    @Bean
     public AuthenticationManager authenticationManagerBean() throws Exception {
         return super.authenticationManagerBean();
+    }
+
+    //配置内存模式的用户
+    @Bean
+    @Override
+    protected UserDetailsService userDetailsService(){
+        InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
+        manager.createUser(User.withUsername("demoUser1").password("123456").authorities("USER").build());
+        manager.createUser(User.withUsername("demoUser2").password("123456").authorities("USER").build());
+        return manager;
+    }
+
+    @Autowired
+    private CustomAuthenticationProvider authenticationProvider;
+
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+          auth.authenticationProvider(authenticationProvider);
     }
 }

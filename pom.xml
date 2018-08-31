@@ -45,7 +45,6 @@
         <commons-lang3.version>3.3.2</commons-lang3.version>
         <commons-io.version>2.5</commons-io.version>
         <pinyin4j.version>2.5.0</pinyin4j.version>
-        <commons-lang3.version>3.3.2</commons-lang3.version>
     </properties>
 
 
@@ -156,6 +155,18 @@
                 <scope>provided</scope>
                 <version>1.16.22</version>
             </dependency>
+
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.module</groupId>
+                <artifactId>jackson-module-afterburner</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+
       </dependencies>
     </dependencyManagement>
 

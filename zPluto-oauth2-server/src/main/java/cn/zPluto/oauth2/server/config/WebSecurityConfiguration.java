@@ -8,9 +8,12 @@ package cn.zPluto.oauth2.server.config;  /**
 
 import cn.zPluto.oauth2.server.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.authentication.configurers.GlobalAuthenticationConfigurerAdapter;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
 /**
  * @author zhouh
@@ -19,7 +22,7 @@ import org.springframework.security.config.annotation.authentication.configurers
  *
  */
 @Configuration
-public class WebSecurityConfiguration extends GlobalAuthenticationConfigurerAdapter {
+public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 //    @Autowired
 //    private final UserService userService;
@@ -34,4 +37,10 @@ public class WebSecurityConfiguration extends GlobalAuthenticationConfigurerAdap
 //        auth.userDetailsService(userService);
 //
 //    }
+
+    @Override
+    @Bean   // share AuthenticationManager for web and oauth
+    public AuthenticationManager authenticationManagerBean() throws Exception {
+        return super.authenticationManagerBean();
+    }
 }

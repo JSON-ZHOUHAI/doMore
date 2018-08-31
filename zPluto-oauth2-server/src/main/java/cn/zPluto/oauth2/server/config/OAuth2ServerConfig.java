@@ -34,23 +34,34 @@ public class OAuth2ServerConfig extends AuthorizationServerConfigurerAdapter {
     @Autowired
     private DataSource dataSource;
 
+
     /**
-     * client_credentials 模式
+     * client_credentials 模式，使用数据库中client数据
      * @param clients
      * @throws Exception
      */
-
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-        clients.inMemory()
-                .withClient("demoApp")
-                .secret("demoAppSecret")
-                .authorizedGrantTypes("client_credentials", "password", "refresh_token")
-                .scopes("all")
-                .resourceIds("oauth2-resource")
-                .accessTokenValiditySeconds(1200)
-                .refreshTokenValiditySeconds(50000);
+        clients.jdbc(dataSource);
     }
+
+
+//    /**
+//     * client_credentials 模式，使用固定数据
+//     * @param clients
+//     * @throws Exception
+//     */
+//    @Override
+//    public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
+//        clients.inMemory()
+//                .withClient("demoApp")
+//                .secret("demoAppSecret")
+//                .authorizedGrantTypes("client_credentials", "password", "refresh_token")
+//                .scopes("all")
+//                .resourceIds("oauth2-resource")
+//                .accessTokenValiditySeconds(1200)
+//                .refreshTokenValiditySeconds(50000);
+//    }
 
     @Override
     public void configure(AuthorizationServerSecurityConfigurer oauthServer) throws Exception {

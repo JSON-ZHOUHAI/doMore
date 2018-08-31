@@ -29,17 +29,21 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     /**
-     *  不拦截oauth要开放的资源
+     *  这里记得设置requestMatchers,不拦截需要token验证的url,
+     *  不然会优先被这个filter拦截,走用户端的认证而不是token认证
+     *   新增formLogin，用于页面授权
      * @param http
      * @throws Exception
      */
     @Override
     public void configure(HttpSecurity http) throws Exception {
         http.csrf().disable();
-        http.requestMatchers().antMatchers("/oauth/**")
+        http.requestMatchers().antMatchers("/oauth/**","login/**","/logout/**")
                 .and()
                 .authorizeRequests()
-                .antMatchers("/oauth/**").authenticated();
+                .antMatchers("/oauth/**").authenticated()
+                .and()
+                .formLogin().permitAll();;
     }
 
     /**
@@ -65,11 +69,13 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
         return manager;
     }
 
-    @Autowired
-    private CustomAuthenticationProvider authenticationProvider;
+//    @Autowired
+//    private CustomAuthenticationProvider authenticationProvider;
+//
+//    @Override
+//    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+//          auth.authenticationProvider(authenticationProvider);
+//    }
 
-    @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-          auth.authenticationProvider(authenticationProvider);
-    }
+
 }

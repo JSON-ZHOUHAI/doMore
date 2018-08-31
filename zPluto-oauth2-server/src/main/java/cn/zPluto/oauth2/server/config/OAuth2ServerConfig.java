@@ -65,6 +65,7 @@ public class OAuth2ServerConfig extends AuthorizationServerConfigurerAdapter {
     @Override
     public void configure(AuthorizationServerSecurityConfigurer oauthServer) throws Exception {
         oauthServer
+                .realm("oauth2-resources")
                 .tokenKeyAccess("permitAll()")
                 .checkTokenAccess("isAuthenticated()") //allow check token
                 .allowFormAuthenticationForClients();

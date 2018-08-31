@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
  *
  * 自定义的的认证provider
  */
-@Component
+//@Component
 public class CustomAuthenticationProvider implements AuthenticationProvider {
 
   protected final Logger logger = LoggerFactory.getLogger(this.getClass());

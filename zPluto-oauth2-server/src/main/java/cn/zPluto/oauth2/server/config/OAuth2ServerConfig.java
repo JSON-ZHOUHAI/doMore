@@ -34,38 +34,10 @@ public class OAuth2ServerConfig extends AuthorizationServerConfigurerAdapter {
     @Autowired
     private DataSource dataSource;
 
-    /**
-     * client_credentials 模式，使用数据库中client数据
-     * @param clients
-     * @throws Exception
-     */
-    @Override
-    public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-        clients.jdbc(dataSource);
-    }
-
-
-//    /**
-//     * client_credentials 模式，使用固定数据
-//     * @param clients
-//     * @throws Exception
-//     */
-//    @Override
-//    public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-//        clients.inMemory()
-//                .withClient("demoApp")
-//                .secret("demoAppSecret")
-//                .authorizedGrantTypes("client_credentials", "password", "refresh_token")
-//                .scopes("all")
-//                .resourceIds("oauth2-resource")
-//                .accessTokenValiditySeconds(1200)
-//                .refreshTokenValiditySeconds(50000);
-//    }
-
     @Override
     public void configure(AuthorizationServerSecurityConfigurer oauthServer) throws Exception {
         oauthServer
-                .realm("oauth2-resources")
+                .realm("oauth2-resource")
                 .tokenKeyAccess("permitAll()")
                 .checkTokenAccess("isAuthenticated()") //allow check token
                 .allowFormAuthenticationForClients();
@@ -81,5 +53,35 @@ public class OAuth2ServerConfig extends AuthorizationServerConfigurerAdapter {
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
         endpoints.authenticationManager(authenticationManager);
+    }
+
+
+    /**
+     * client_credentials 模式，使用数据库中client数据
+     * @param clients
+     * @throws Exception
+     */
+//    @Override
+//    public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
+//        clients.jdbc(dataSource);
+//    }
+
+
+    /**
+     * client_credentials 模式，使用固定数据
+     * @param clients
+     * @throws Exception
+     */
+    @Override
+    public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
+        clients.inMemory()
+                .withClient("demoApp")
+                .secret("demoAppSecret")
+                .redirectUris("http://baidu.com")
+                .authorizedGrantTypes("password","refresh_token", "client_credentials")
+                .scopes("all")
+                .resourceIds("oauth2-resources")
+                .accessTokenValiditySeconds(1200)
+                .refreshTokenValiditySeconds(50000);
     }
 }

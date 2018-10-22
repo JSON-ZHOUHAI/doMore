@@ -43,7 +43,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers("/oauth/**").authenticated()
                 .and()
-                .formLogin().permitAll();;
+                .formLogin().permitAll();
     }
 
     /**
@@ -53,20 +53,20 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
      * @throws Exception
      */
     //配置内存模式的用户
-    @Override
-    @Bean
-    public AuthenticationManager authenticationManagerBean() throws Exception {
-        return super.authenticationManagerBean();
-    }
-
-    //配置内存模式的用户
     @Bean
     @Override
     protected UserDetailsService userDetailsService(){
         InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
-        manager.createUser(User.withUsername("demoUser1").password("123456").authorities("USER").build());
-        manager.createUser(User.withUsername("demoUser2").password("123456").authorities("USER").build());
+        manager.createUser(User.withUsername("user").password("123456").authorities("USER").build());
+        manager.createUser(User.withUsername("user2").password("123456").authorities("USER").build());
         return manager;
+    }
+
+    //配置内存模式的用户
+    @Override
+    @Bean
+    public AuthenticationManager authenticationManagerBean() throws Exception {
+        return super.authenticationManagerBean();
     }
 
 //    @Autowired
